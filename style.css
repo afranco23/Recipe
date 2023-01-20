@@ -222,6 +222,7 @@ footer {
   font-size: 14px;
   line-height: 17px;
   color: #828282;
+  text-align: center;
 }
 
 @media (max-width: 480px) {
