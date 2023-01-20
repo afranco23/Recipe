@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin-left: 200px;
+}
+
+main {
+  margin-top: 43px;
+  display: flex;
+  flex-direction: column;
+}
+
+figure img {
+  width: 1200px;
+  height: 444px;
+  object-fit: none;
+  border-radius: 12px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 52px;
+}
+
+header .text {
+  display: flex;
+  flex-direction: row;
+}
+
+header h1 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  margin-bottom: 12px;
+  text-transform: capitalize;
+}
+
+header .material-symbols-outlined {
+  transform: rotate(90deg);
+  height: 8px;
+  width: 13px;
+  color: gray;
+  opacity: 40%;
+  margin: 0 12px 0 10px;
+}
+
+header p {
+  width: 600px;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 17px;
+  color: #4f4f4f;
+}
+
+.recipe {
+  display: grid;
+  grid-template-areas: "B C";
+  margin-top: 48px;
+}
+
+.recipe h1 {
+  margin-left: 5px;
+}
+
+.preparation {
+  grid-area: B;
+  width: 480px;
+  margin-left: 10px;
+}
+
+.preparation ul li {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.preparation label {
+  font-size: 16px;
+  font-family: "montserrat", monospace;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.box {
+  grid-area: C;
+  width: 230px;
+  height: 400px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.material-symbols-outlined#orange {
+  color: #f2994a;
+}
+
+.box ul {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.box ul li {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+
+.howto {
+  display: flex;
+  flex-direction: column;
+}
+
+.info2#orange {
+  color: #f2994a;
+}
+
+.instruc ul li {
+  text-indent: -50px;
+}
+
+.instruc {
+  margin-left: 37px;
+}
+
+#square {
+  width: 20px;
+  height: 20px;
+  padding: 2px 12px 6px 13px;
+  background: #f2994a;
+  border-radius: 6px;
+  font-family: "Playfair Display";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: white;
+  margin-right: 14px;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #828282;
+  border-radius: 4px;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+  border: 1px solid #828282;
+  border-radius: 4px;
+}
+
+.container input:checked ~ .checkmark {
+  border: 1px solid #828282;
+  border-radius: 4px;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+footer {
+  padding: 20px;
+  font-family: "montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #828282;
+}
+
+@media (max-width: 480px) {
+  body {
+    margin-left: 13px;
+  }
+  header {
+    margin: 32px 15px -25px 11px;
+    width: 500px;
+  }
+
+  header h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  header p {
+    width: fit-content;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  figure img {
+    width: 610px;
+    height: 444px;
+    object-fit: none;
+    border-radius: 12px;
+    margin-left: 5px;
+  }
+
+  .recipe {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box {
+    box-shadow: none;
+    padding: 0px;
+    height: fit-content;
+    margin-left: 5px;
+    margin-bottom: 30px;
+  }
+
+  .material-symbols-outlined#orange {
+    color: #f2994a;
+  }
+
+  .box ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .box ul li {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  .preparation {
+    display: block;
+  }
+
+  .howto {
+    width: 80px;
+    font-size: 14px;
+  }
+
+  footer {
+    text-align: center;
+    width: 500px;
+  }
+}
